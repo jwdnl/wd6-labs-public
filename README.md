@@ -27,9 +27,10 @@ This repository intentionally contains public-facing material only:
 - the public telemetry contract;
 - public operational and disclosure information.
 
-Private infrastructure addresses, inventories, credentials, identities, raw
-logs, peer metadata and recovery material are excluded. A repository safety
-workflow checks every push for common secret formats and private address space.
+Private infrastructure addresses, inventories, credentials, private identity
+material, raw logs, peer metadata and recovery material are excluded. A
+repository safety workflow checks every push for common secret formats and
+private address space.
 
 ## Reticulum-native access
 
