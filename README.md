@@ -33,9 +33,19 @@ workflow checks every push for common secret formats and private address space.
 
 ## Reticulum-native access
 
-A read-only `rngit` and NomadNet mirror is being commissioned on the existing
-WD6 Reticulum transport. Its destination will be added here after the public
-fetch and write-denial tests pass.
+A read-only `rngit` and NomadNet mirror is available on the existing WD6
+Reticulum transport. With RNS and the `git-remote-rns` helper installed:
+
+```console
+git clone rns://1304210b2ce0bf92ddac65ce2374885c/public/wd6-labs-public.git
+```
+
+- rngit destination: `1304210b2ce0bf92ddac65ce2374885c`
+- NomadNet destination: `0e21c67830a5f6a2b6aef5b61c052d8a`
+
+The public clone and explicit write-denial paths were tested from a separate
+client profile on 3 September 2026. The mirror has no write, create, admin or
+statistics permission and does not expose another IP listener.
 
 Reticulum and `rngit` are documented at
 [reticulum.network](https://reticulum.network/manual/git.html).
