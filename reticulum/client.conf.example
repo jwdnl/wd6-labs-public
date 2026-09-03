@@ -1,0 +1,16 @@
+# Add one of these interfaces below the [interfaces] section in your existing
+# Reticulum configuration. Do not copy this file over a complete configuration.
+
+[[WD6 Amsterdam]]
+  type = TCPClientInterface
+  enabled = yes
+  target_host = rns.wd6.net
+  target_port = 4242
+
+# RNS versions with BackboneInterface support can use this alternative instead:
+#
+# [[WD6 Amsterdam Backbone]]
+#   type = BackboneInterface
+#   enabled = yes
+#   remote = rns.wd6.net
+#   target_port = 4242
