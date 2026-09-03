@@ -16,6 +16,8 @@ Published measurements include:
 - counts of distinct next hops and route-contributing sessions;
 - a route-table phase that marks the first 30 minutes after an RNS restart as
   relearning.
+- Reticulum Git reachability, whether the public mirror is current, and the age
+  of that functional check.
 
 The independence percentage is not a quality score. It is the current share of
 known destinations learned outside the configured bootstrap. It can change
@@ -23,4 +25,5 @@ substantially while routes expire, reconnect or are relearned.
 
 The public surface excludes source IP addresses, peer and interface hashes,
 destination hashes, route contents, payloads, raw logs, stable user identifiers
-and authenticated operator detail.
+and authenticated operator detail. Reticulum Git commit hashes and repository
+contents are likewise excluded from telemetry.

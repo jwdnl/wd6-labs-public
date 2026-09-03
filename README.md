@@ -32,6 +32,11 @@ material, raw logs, peer metadata and recovery material are excluded. A
 repository safety workflow checks every push for common secret formats and
 private address space.
 
+The public tree is published automatically from a separately reviewed,
+sanitised directory in the private operations repository. The publisher has a
+repository-bound deploy key for this repository only; internal files are never
+part of the synchronised source tree.
+
 ## Reticulum-native access
 
 A read-only `rngit` and NomadNet mirror is available on the existing WD6
@@ -47,6 +52,12 @@ git clone rns://1304210b2ce0bf92ddac65ce2374885c/public/wd6-labs-public.git
 The public clone and explicit write-denial paths were tested from a separate
 client profile on 3 September 2026. The mirror has no write, create, admin or
 statistics permission and does not expose another IP listener.
+
+The existing home observer also performs a read-only end-to-end check every
+fifteen minutes and verifies whether the Reticulum mirror matches the public
+GitHub source. The live status page exposes only reachability, freshness and
+check age. This is a functional check outside the gateway VM, not a second
+independent hosting site.
 
 Reticulum and `rngit` are documented at
 [reticulum.network](https://reticulum.network/manual/git.html).
