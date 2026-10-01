@@ -14,3 +14,7 @@
 #   enabled = yes
 #   remote = rns.wd6.net
 #   target_port = 4242
+
+# Use only one alternative for this gateway. Ordinary end-user clients should
+# keep enable_transport = no. Community/radio operators: see CONNECT.md and
+# community.conf.example for boundary/internal interface guidance.

@@ -1,0 +1,20 @@
+# Merge into your existing config; do not replace the complete file.
+# This example is for an operator bridging a separate, slower radio/community
+# segment to the public network. It is not needed for an ordinary end-user app.
+# Under [reticulum], enable_transport = yes on this operator-owned gateway.
+# Place the interface below under [interfaces].
+#
+# Set existing interfaces facing the slower/local segment to mode = internal
+# when they should resolve external paths on demand instead of receiving the
+# wider network's announces. Keep their hardware/frequency settings unchanged.
+# Read CONNECT.md before selecting modes for a same-speed IP interconnection.
+
+[[WD6 Amsterdam Community Uplink]]
+  type = BackboneInterface
+  enabled = yes
+  mode = boundary
+  remote = rns.wd6.net
+  target_port = 4242
+
+# If BackboneInterface is unavailable on your platform, use TCPClientInterface
+# instead, replacing remote with target_host and preserving mode = boundary.

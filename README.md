@@ -18,6 +18,10 @@ Copy [`reticulum/client.conf.example`](reticulum/client.conf.example) into the
 `[interfaces]` section of your Reticulum configuration, or adapt the included
 Backbone example on supported RNS versions.
 
+The [connection guide](reticulum/CONNECT.md) includes an end-to-end protocol
+test, troubleshooting and an example for connecting a community or radio segment.
+Operators can [discuss a bounded connection trial](mailto:abuse@wd6.net?subject=Reticulum%20community%20uplink).
+
 ## Repository scope
 
 This repository intentionally contains public-facing material only:
@@ -64,7 +68,11 @@ Reticulum and `rngit` are documented at
 
 ## Contact
 
-Operational or abuse reports: [abuse@wd6.net](mailto:abuse@wd6.net)
+Community connections, operational or abuse reports:
+[abuse@wd6.net](mailto:abuse@wd6.net). Include your software/version, the check
+time with timezone and a short description of your network. Keep private keys,
+credentials and user logs out of reports. An operator LXMF address will be
+published only when its receiving and backup path are verified.
 
 No licence is granted for third-party reuse unless a file explicitly states
 otherwise. The connection examples may be copied and adapted for use with the
